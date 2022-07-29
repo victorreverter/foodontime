@@ -1,4 +1,4 @@
-@import 'reset';
+@import 'reset', 'flags';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Spline+Sans:wght@400;500;700&display=swap');
 
@@ -8,14 +8,20 @@ $black_base: #212121;
 $colorBg_light: #E1E1E1;
 $contrast_light: #26394F;
 
+$colorBg_dark: #443069;
+$contrast_dark: #ECE8D9;
+
 $fruit_color: #F14B4F;
 $veggie_color: #68972A;
 
 $contrast_fruits: #FAD0B9;
 $contrast_veggies: #F1FF90;
 
+$texts_light: $contrast_light;
+$texts_dark: $contrast_dark;
+
 html, body {
-    background: $colorBg_light;
+    background: $white_base;
     font-family: 'Roboto', sans-serif;
     font-family: 'Spline Sans', sans-serif;
 }
@@ -71,7 +77,18 @@ html, body {
 }
 
 .selection_zone {
-    div.scrollmenu {
+    .title_app {
+        width: 100%;
+        padding: 0 0 0.5em;
+
+        font-size: 1.6em;
+        font-weight: 500;
+
+        text-align: center;
+        color: $texts_light;
+    }
+
+    .scrollmenu {
         background-color: #333;
         overflow: auto;
         white-space: nowrap;
@@ -83,16 +100,94 @@ html, body {
             display: none;
         }
     }
+    
+    .country_section, .month_section {
+        .box_container {
+            display: inline-block;
 
-    div.scrollmenu a {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px;
-        text-decoration: none;
+            text-align: center;
+            text-decoration: none;
+
+            .box_item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+                overflow: hidden;
+
+                margin: 0 0.25em;
+
+                padding: 0.25em 0.5em;
+                border-radius: 40px;
+        
+                background: $colorBg_light;
+                
+                // &:hover {
+                //     background-color: #777;
+                // }
+    
+                .flag_item {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    // background: red;
+                }
+        
+                p {
+                    padding: 0 0 0 0.3em;
+                    font-weight: 500;
+                    color: $texts_light;
+                }
+            }
+        }
     }
 
-    div.scrollmenu a:hover {
-        background-color: #777;
+    .season_section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        margin: 1em 0;
+
+        .box_container {
+            display: inline-block;
+
+            text-align: center;
+            text-decoration: none;
+
+            .box_item {
+                margin: 0 0.25em;
+
+                padding: 1em 0.5em;
+                border-radius: 0px;
+
+                background: $colorBg_light;
+
+                p {
+                    padding: 0 0.3em;
+                    font-weight: 500;
+                    color: $texts_light;
+                }
+            }
+        }
+    }
+
+    .month_section {
+        .box_container {
+            .box_item {
+                width: 90px;
+                margin: 0 0.25em;
+
+                padding: 1em 0.5em;
+                border-radius: 10px;
+
+                p {
+                    width: 100%;
+                    padding: 0 0.3em;
+                    text-align: center;
+                }
+            }
+        }
     }
 }
