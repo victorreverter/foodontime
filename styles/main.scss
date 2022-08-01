@@ -20,6 +20,38 @@ $contrast_veggies: #F1FF90;
 $texts_light: $contrast_light;
 $texts_dark: $contrast_dark;
 
+// Keyframes for devices (begins at Iphone 6/7/8)
+
+// Iphone 6/7/8 Plus
+$iphonePlusWidth: 414px;
+$iphonePlusHeight: 736px;
+
+// Iphone X
+$iphoneXWidth: 375px;
+$iphoneXHeight: 812px;
+
+// Iphone 12 Pro
+$iphone12ProWidth: 390px;
+$iphone12ProHeight: 844px;
+
+// Iphone XR
+$iphoneXRWidth: 414px;
+$iphoneXRHeight: 896px;
+
+// Ipad
+$iphoneIpadWidth: 768px;
+$iphoneIpadHeight: 1024px;
+
+// Ipad Pro
+$iphoneIpadProWidth: 1024px; 
+$iphoneIpadProHeight: 1366px;
+
+// Mac-13
+$iphoneMac13Width: 1280px; 
+$iphoneMac13Height: 800px;
+
+// =============================================
+
 html, body {
     background: $white_base;
     font-family: 'Roboto', sans-serif;
@@ -148,7 +180,10 @@ html, body {
         align-items: center;
         justify-content: space-around;
 
-        margin: 1em 0;
+        width: 100%;
+        max-width: 450px;
+
+        margin: 1em auto;
 
         .box_container {
             display: inline-block;
@@ -205,6 +240,9 @@ html, body {
         justify-content: space-around;
         
         width: 100%;
+        max-width: 450px;
+
+        margin: 0 auto;
         padding: 1.5em 0;
 
         .fruits_btn, .veggies_btn {
@@ -260,4 +298,74 @@ html, body {
             color: $contrast_light;
         }
     }
+}
+
+// KEYFRAMES ===================================
+
+// Iphone 6/7/8 Plus
+@media (min-width: $iphonePlusWidth) and (min-height: $iphonePlusHeight) {
+    .results_zone .fruits_showcase, .results_zone .veggies_showcase {
+        height: 40vh;
+    }
+}
+
+// Iphone X
+@media (min-width: $iphoneXWidth) and (min-height: $iphoneXHeight) {
+    .results_zone .fruits_showcase, .results_zone .veggies_showcase {
+        height: 45vh;
+    }
+}
+
+// Iphone 12 Pro
+@media (min-width: $iphone12ProWidth) and (min-height: $iphone12ProHeight) {
+    .results_zone .fruits_showcase, .results_zone .veggies_showcase {
+        height: 45vh;
+    }
+}
+
+// Iphone XR
+@media (min-width: $iphoneXRWidth) and (min-height: $iphoneXRHeight) {
+    .results_zone .fruits_showcase, .results_zone .veggies_showcase {
+        height: 50vh;
+    }
+}
+
+// Ipad
+@media (min-width: $iphoneIpadWidth) and (min-height:$iphoneIpadHeight) {
+    .header .logo_zone {
+        width: 360px;
+        height: 65px;
+        background: url("../imgs/LogoBig.png");
+        background-size: contain;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    
+    .selection_zone .title_app {
+        font-size: 2.4em;
+        padding: 1em 0;
+    }
+
+    .results_zone .alternate_container {
+        padding: 2.5em 0;
+    }
+
+    .results_zone .fruits_showcase, .results_zone .veggies_showcase {
+        height: 38vh;
+    }
+
+    .results_zone .fruits_showcase .initial_text, .results_zone .veggies_showcase .initial_text {
+        font-size: 2.4em;
+    }
+}
+
+// Ipad Pro
+@media (min-width: $iphoneIpadProWidth) and (min-height: $iphoneIpadProHeight) {
+    .results_zone .fruits_showcase .initial_text, .results_zone .veggies_showcase .initial_text {
+        font-size: 3.2em;
+    }
+}
+
+// Mac-13
+@media (min-width: $iphoneMac13Width) and (min-height: $iphoneMac13Height) {
 }
