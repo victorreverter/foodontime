@@ -11,8 +11,8 @@ $contrast_light: #26394F;
 $colorBg_dark: #443069;
 $contrast_dark: #ECE8D9;
 
-$fruit_color: #F14B4F;
-$veggie_color: #68972A;
+$fruits_color: #F14B4F;
+$veggies_color: #68972A;
 
 $contrast_fruits: #FAD0B9;
 $contrast_veggies: #F1FF90;
@@ -89,7 +89,7 @@ html, body {
     }
 
     .scrollmenu {
-        background-color: #333;
+        // background-color: #333;
         overflow: auto;
         white-space: nowrap;
 
@@ -188,6 +188,76 @@ html, body {
                     text-align: center;
                 }
             }
+        }
+    }
+}
+
+.results_zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+    .alternate_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        
+        width: 100%;
+        padding: 1.5em 0;
+
+        .fruits_btn, .veggies_btn {
+            display: block;
+            width: 45%;
+            padding: 0.3em 0;
+
+            background: #797979;
+            border-radius: 40px;
+            
+            font-size: 1.8em;
+
+            color: $white_base;
+            text-align: center;
+        }
+
+        .fruits_btn {
+            background: $fruits_color;
+            color: $contrast_fruits;
+        }
+
+        .veggies_btn {
+            background: $veggies_color;
+            color: $contrast_veggies;
+        }
+
+        .active {
+            opacity: 0.3;
+        }
+
+    }
+
+    .fruits_showcase, .veggies_showcase {
+        display: block;
+        width: 100%;
+        height: 35vh;
+        position: relative;
+
+        background: $colorBg_light;
+
+        .initial_text {
+            display: block;
+            width: 100%;
+
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+
+            font-size: 1.8em;
+            text-align: center;
+
+            color: $contrast_light;
         }
     }
 }
