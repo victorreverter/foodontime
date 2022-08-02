@@ -39,16 +39,16 @@ $iphoneXRWidth: 414px;
 $iphoneXRHeight: 896px;
 
 // Ipad
-$iphoneIpadWidth: 768px;
-$iphoneIpadHeight: 1024px;
+$ipadWidth: 768px;
+$ipadHeight: 1024px;
 
 // Ipad Pro
-$iphoneIpadProWidth: 1024px; 
-$iphoneIpadProHeight: 1366px;
+$ipadProWidth: 1024px; 
+$ipadProHeight: 1366px;
 
 // Mac-13
-$iphoneMac13Width: 1280px; 
-$iphoneMac13Height: 800px;
+$mac13Width: 1280px; 
+$mac13Height: 800px;
 
 // =============================================
 
@@ -331,7 +331,7 @@ html, body {
 }
 
 // Ipad
-@media (min-width: $iphoneIpadWidth) and (min-height:$iphoneIpadHeight) {
+@media (min-width: $ipadWidth) and (min-height:$ipadHeight) {
     .header .logo_zone {
         width: 360px;
         height: 65px;
@@ -363,8 +363,16 @@ html, body {
     }
 }
 
+// Ipad Horizontal
+@media (min-width: $ipadHeight) and (min-height: $ipadWidth) {
+    .selection_zone .season_section {
+        margin: 0 auto;
+    }
+}
+
+
 // Ipad Pro
-@media (min-width: $iphoneIpadProWidth) and (min-height: $iphoneIpadProHeight) {
+@media (min-width: $ipadProWidth) and (min-height: $ipadProHeight) {
     .selection_zone .season_section {
         margin: 0 auto;
     }
@@ -390,7 +398,7 @@ html, body {
 }
 
 // Mac-13
-@media (min-width: $iphoneMac13Width) and (min-height: $iphoneMac13Height) {
+@media (min-width: $mac13Width) and (min-height: $mac13Height) {
     .selection_zone .season_section {
         margin: 0 auto;
     }
