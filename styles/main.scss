@@ -63,6 +63,36 @@ html, body {
     min-height: 100vh;
 }
 
+.no_available {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+
+    background: $colorBg_light;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+
+    .title_available {
+        display: block;
+        width: 80%;
+
+        font-size: 1.5em;
+        text-align: center;
+
+        color: $contrast_light;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -183,6 +213,7 @@ html, body {
         width: 100%;
         max-width: 450px;
 
+        margin: 0 auto;
         padding: 1em 0;
 
         .box_container {
@@ -301,6 +332,19 @@ html, body {
 }
 
 // KEYFRAMES ===================================
+
+// NO AVAILABILITY
+@media (max-width: 374px) and (max-height: 666px) {
+    .no_available {
+        display: block;
+    }
+}
+
+@media (max-width: $ipadHeight - 1px) and (max-height: $ipadWidth - 1px) and (orientation: landscape) {
+    .no_available {
+        display: block;
+    }
+}
 
 // Iphone 6/7/8 Plus
 @media (min-width: $iphonePlusWidth) and (min-height: $iphonePlusHeight) {
