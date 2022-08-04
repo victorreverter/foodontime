@@ -77,20 +77,38 @@ html, body {
 
     z-index: 10;
 
-    .title_available {
+    .container_no_available {
         display: block;
-        width: 80%;
-
-        font-size: 1.5em;
-        text-align: center;
-
-        color: $contrast_light;
+        width: 90%;
 
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        .logo_no_available {
+            width: 100%;
+            height: 60px;
+
+            background: url("../imgs/LogoBig.png");
+            background-size: contain;
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+
+        .title_available {
+            display: block;
+            width: 100%;
+    
+            font-size: 1.5em;
+            text-align: center;
+
+            padding: 0.5em 0 0;
+    
+            color: $contrast_light;
+        }
     }
+
 }
 
 .header {
@@ -331,6 +349,59 @@ html, body {
     }
 }
 
+.showcase_reel {
+    margin: 1vh 0 0;
+
+    // background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .pic_item {
+        display: inline-block;
+
+        width: 50%;
+        height: 33vh;
+
+        margin: 0 0.3em 0;
+
+        background: red;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+
+        border-radius: 10px;
+        box-shadow: 0 0 4px $black_base;
+
+        position: relative;
+        overflow: hidden;
+
+        .pic_item_title {
+            width: 100%;
+            padding: 0.8em 0;
+
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0%);
+
+            font-size: 0.9em;
+            text-align: center;
+            color: $white_base;
+
+            background: linear-gradient(rgba($black_base, 0), $black_base);
+        }
+    }
+}
+
 // KEYFRAMES ===================================
 
 // NO AVAILABILITY
@@ -376,15 +447,6 @@ html, body {
 
 // Ipad
 @media (min-width: $ipadWidth) and (min-height:$ipadHeight) {
-    .header .logo_zone {
-        width: 360px;
-        height: 65px;
-        background: url("../imgs/LogoBig.png");
-        background-size: contain;
-        background-position: top center;
-        background-repeat: no-repeat;
-    }
-    
     .selection_zone .title_app {
         font-size: 2.4em;
         padding: 1em 0;
@@ -409,6 +471,15 @@ html, body {
 
 // Ipad Horizontal
 @media (min-width: $ipadHeight) and (min-height: $ipadWidth) {
+    .header .logo_zone {
+        width: 360px;
+        height: 65px;
+        background: url("../imgs/LogoBig.png");
+        background-size: contain;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    
     .selection_zone .season_section {
         margin: 0 auto;
     }
@@ -436,10 +507,23 @@ html, body {
         padding: 0.3em 0.25em;
     }
 
+    .results_zone .fruits_showcase, .results_zone .veggies_showcase {
+        height: 33vh;
+    }
+
     .results_zone .fruits_showcase .initial_text, .results_zone .veggies_showcase .initial_text {
         font-size: 3.2em;
     }
+
 }
+
+// Ipad Pro Horizontal
+@media (min-width: $ipadProHeight) and (min-height: $ipadProWidth) {
+    .results_zone .fruits_showcase, .results_zone .veggies_showcase {
+        height: 32vh;
+    }
+}
+
 
 // Mac-13
 @media (min-width: $mac13Width) and (min-height: $mac13Height) {
