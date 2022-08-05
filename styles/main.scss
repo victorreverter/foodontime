@@ -422,12 +422,21 @@ html, body {
     .results_zone .fruits_showcase, .results_zone .veggies_showcase {
         height: 40vh;
     }
+
+    .showcase_reel .pic_item {
+        height: 38vh;
+    }
 }
 
 // Iphone X
 @media (min-width: $iphoneXWidth) and (min-height: $iphoneXHeight) {
     .results_zone .fruits_showcase, .results_zone .veggies_showcase {
         height: 45vh;
+    }
+
+    .showcase_reel .pic_item {
+        width: 65%;
+        height: 43vh;
     }
 }
 
@@ -436,12 +445,21 @@ html, body {
     .results_zone .fruits_showcase, .results_zone .veggies_showcase {
         height: 45vh;
     }
+
+    .showcase_reel .pic_item {
+        height: 43vh;
+    }
 }
 
 // Iphone XR
 @media (min-width: $iphoneXRWidth) and (min-height: $iphoneXRHeight) {
     .results_zone .fruits_showcase, .results_zone .veggies_showcase {
         height: 50vh;
+    }
+
+    .showcase_reel .pic_item {
+        width: 70%;
+        height: 48vh;
     }
 }
 
@@ -464,6 +482,15 @@ html, body {
         height: 38vh;
     }
 
+    .showcase_reel .pic_item {
+        width: 35%;
+        height: 36vh;
+    }
+
+    .showcase_reel .pic_item .pic_item_title {
+        font-size: 1.1em;
+    }
+
     .results_zone .fruits_showcase .initial_text, .results_zone .veggies_showcase .initial_text {
         font-size: 2.4em;
     }
@@ -482,6 +509,10 @@ html, body {
     
     .selection_zone .season_section {
         margin: 0 auto;
+    }
+
+    .showcase_reel .pic_item {
+        width: 20%;
     }
 }
 
@@ -511,6 +542,15 @@ html, body {
         height: 33vh;
     }
 
+    .showcase_reel .pic_item {
+        width: 30%;
+        height: 31vh;
+    }
+
+    .showcase_reel .pic_item .pic_item_title {
+        font-size: 1.3em;
+    }
+
     .results_zone .fruits_showcase .initial_text, .results_zone .veggies_showcase .initial_text {
         font-size: 3.2em;
     }
@@ -521,6 +561,11 @@ html, body {
 @media (min-width: $ipadProHeight) and (min-height: $ipadProWidth) {
     .results_zone .fruits_showcase, .results_zone .veggies_showcase {
         height: 32vh;
+    }
+
+    .showcase_reel .pic_item {
+        width: 18%;
+        height: 30vh;
     }
 }
 
